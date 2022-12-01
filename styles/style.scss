@@ -1,0 +1,596 @@
+// Start The Global Style
+$main-color: #f40612;
+$alt-color: #fff;
+$bg-color: #303030;
+$fs: 20px; // font-size
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-weight: bold !important;
+}
+body {
+  font-family: "Fredoka", sans-serif;
+  font-family: "Open Sans", sans-serif;
+  background-color: #000000;
+}
+// End The Global Style
+hr {
+  background-color: $bg-color;
+  height: 10px;
+  margin-top: 0;
+  width: 100%;
+  position: absolute;
+  bottom: -25px;
+}
+// Start The Header
+header {
+  height: 100vh;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00000094;
+    z-index: 2;
+  }
+
+  & > img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+
+  .container {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 10px 110px;
+    height: 100%;
+
+    .top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      @media (max-width: 350px) {
+        & {
+          flex-direction: column;
+          margin-bottom: 20px;
+        }
+      }
+
+      h1 {
+        color: $main-color;
+        text-transform: uppercase;
+
+        @media (max-width: 420px) {
+          & {
+            font-size: 23px;
+          }
+        }
+      }
+
+      .options {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+
+        @media (max-width: 420px) {
+          & {
+            gap: 5px;
+          }
+        }
+
+        select {
+          background-color: transparent;
+          color: $alt-color;
+          padding: 10px;
+          font-size: $fs;
+
+          @media (max-width: 420px) {
+            & {
+              padding: 2px;
+            }
+          }
+
+          option {
+            background-color: $bg-color;
+
+            @media (max-width: 420px) {
+              & {
+                font-size: 15px;
+              }
+            }
+          }
+        }
+
+        a {
+          background-color: red;
+          color: #fff;
+          text-decoration: none;
+          padding: 10px;
+          border-radius: 5px;
+          font-weight: bold;
+          font-size: $fs;
+
+          @media (max-width: 420px) {
+            & {
+              padding: 2px;
+            }
+          }
+        }
+      }
+    }
+
+    .text {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      color: $alt-color;
+
+      h2 {
+        font-size: 50px;
+        text-align: center;
+        margin-bottom: 15px;
+
+        @media (max-width: 750px) {
+          & {
+            font-size: 30px;
+          }
+        }
+      }
+
+      p {
+        font-size: $fs;
+        text-align: center;
+        line-height: 2.5;
+      }
+    }
+
+    form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      input {
+        width: 400px;
+        height: 40px;
+        outline: none;
+        padding: 10px;
+        border: 2px solid $main-color;
+
+        @media (max-width: 600px) {
+          & {
+            width: 70%;
+          }
+        }
+      }
+
+      button {
+        padding: 9px 20px;
+        margin-right: -1px;
+        background-color: $main-color;
+        color: $alt-color;
+        border: none;
+
+        @media (max-width: 600px) {
+          & {
+            width: 25%;
+          }
+        }
+      }
+    }
+  }
+}
+// End The Header
+// Start The Main
+main {
+  margin-top: 60px;
+
+  section {
+    position: relative;
+
+    .container {
+      padding: 20px 10px;
+      display: flex;
+      align-items: center;
+      gap: 25px;
+
+      @media (max-width: 850px) {
+        & {
+          flex-direction: column;
+          justify-content: center;
+        }
+      }
+
+      .text {
+        flex: 1;
+        color: $alt-color;
+
+        @media (max-width: 850px) {
+          & {
+            text-align: center;
+            margin-bottom: 35px;
+          }
+        }
+
+        h4 {
+          font-size: 50px;
+
+          @media (max-width: 850px) {
+            & {
+              font-size: 25px;
+            }
+          }
+        }
+
+        p {
+          font-size: $fs;
+
+          @media (max-width: 850px) {
+            & {
+              font-size: 15px;
+            }
+          }
+        }
+      }
+
+      .image-corner {
+        flex: 1;
+        position: relative;
+
+        .outer {
+          width: 100%;
+          position: relative;
+          z-index: 5;
+        }
+        .inner {
+          width: 100%;
+          position: absolute;
+          top: 3px;
+          left: 0;
+          z-index: 2;
+        }
+        .small-img {
+          width: 350px;
+
+          @media (min-width: 1400px) {
+            & {
+              left: 104px;
+              width: 65%;
+            }
+          }
+
+          @media (max-width: 1199px) {
+            & {
+              left: 100px;
+              width: 60%;
+            }
+          }
+
+          @media (max-width: 992px) {
+            & {
+              left: 57px;
+              width: 65%;
+              top: 20px;
+            }
+          }
+
+          @media (max-width: 851px) {
+            & {
+              left: 114px;
+              width: 63%;
+              top: 36px;
+            }
+          }
+
+          @media (max-width: 768px) {
+            & {
+              left: 96px;
+            }
+          }
+
+          @media (max-width: 575px) {
+            & {
+              left: 17%;
+              top: 9%;
+            }
+          }
+        }
+      }
+
+      // The Box For The Downloading Movie
+      .box {
+        position: absolute;
+        bottom: 20px;
+        border: 2px solid $bg-color;
+        z-index: 10;
+        width: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 150px;
+        padding: 15px;
+        background-color: #000000;
+        border-radius: 10px;
+
+        @media (max-width: 990px) {
+          & {
+            height: 100px;
+            bottom: 0;
+          }
+        }
+
+        @media (max-width: 340px) {
+          & {
+            height: 70px;
+          }
+        }
+
+        img {
+          height: 120px;
+
+          @media (max-width: 990px) {
+            & {
+              height: 80px;
+              left: 0 !important;
+            }
+          }
+
+          @media (max-width: 340px) {
+            & {
+              height: 60px;
+            }
+          }
+        }
+
+        .text {
+          width: fit-content;
+          padding-right: 20px;
+
+          @media (max-width: 990px) {
+            & {
+              margin-bottom: -15px;
+            }
+          }
+
+          h6 {
+            font-size: 18px;
+
+            @media (max-width: 340px) {
+              & {
+                font-size: 14px;
+              }
+            }
+          }
+
+          p {
+            font-size: 15px;
+            color: #0071eb;
+
+            @media (max-width: 340px) {
+              & {
+                font-size: 12px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// End The Main
+// Start The Questions Section
+.questions {
+  padding: 80px 0;
+  position: relative;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $alt-color;
+
+    h3 {
+      font-size: 40px;
+      margin-bottom: 30px;
+    }
+
+    .custom-details {
+      padding: 20px;
+      width: 80%;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      .box {
+        background-color: $bg-color;
+        padding: 45px 20px;
+        position: relative;
+
+        .top {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          display: flex;
+          flex-direction: row-reverse;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 30px;
+          cursor: pointer;
+
+          &.show {
+            height: fit-content;
+          }
+
+          h6 {
+            font-size: $fs;
+            margin-bottom: 20px;
+            user-select: none;
+            padding-right: 15px;
+            padding-top: 25px;
+          }
+          span {
+            width: 50px;
+            height: 50px;
+            font-size: 40px;
+            cursor: pointer;
+            transition: 0.3s;
+            user-select: none;
+
+            &:hover {
+              color: $main-color;
+            }
+          }
+        }
+
+        .text {
+          transition: 1s;
+          height: 0;
+          overflow: hidden;
+          margin-bottom: -40px;
+
+          &.show {
+            height: fit-content;
+            overflow: auto;
+            margin: 0;
+            padding-top: 65px;
+
+            p {
+              height: fit-content;
+              overflow: auto;
+            }
+          }
+
+          p {
+            font-size: $fs;
+            height: 0;
+            overflow: hidden;
+            transition: 1.3s;
+
+            &:first-of-type {
+              margin-bottom: 30px;
+            }
+          }
+        }
+      }
+    }
+
+    form {
+      text-align: center;
+      position: relative;
+
+      p {
+        font-size: 23px;
+        margin: 40px 0;
+      }
+
+      input {
+        padding: 10px;
+        outline: none;
+        border: none;
+        width: 70%;
+      }
+
+      button {
+        background-color: $main-color;
+        color: $alt-color;
+        font-size: 20px;
+        margin-right: -4px;
+        padding: 8px 0;
+        border: none;
+        width: 15%;
+      }
+    }
+  }
+}
+// End The Questions Section
+// Start The Footer
+footer {
+  margin-top: 40px;
+
+  .container {
+    p {
+      font-size: $fs;
+    }
+
+    ul {
+      display: flex;
+      justify-content: space-around;
+      list-style-type: none;
+
+      @media (max-width: 780px) {
+        & {
+          flex-direction: column;
+          align-items: center;
+          gap: 60px;
+        }
+      }
+
+      li {
+        ul {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+
+          li {
+            a {
+              color: #80808073;
+              text-decoration: none;
+              transition: 0.3s;
+
+              &:hover {
+                color: $main-color;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .bottom {
+      margin-top: 30px;
+      margin-right: 20px;
+
+      & > div {
+        position: relative;
+
+        i {
+          font-size: 20px;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          right: 10px;
+          color: white;
+        }
+
+        select {
+          padding: 10px;
+          padding-right: 40px;
+          background-color: transparent;
+          color: $alt-color;
+
+          option {
+            background-color: #000000;
+          }
+        }
+      }
+
+      P {
+        margin-top: 20px;
+        font-size: 18px;
+      }
+    }
+  }
+}
+// End The Footer

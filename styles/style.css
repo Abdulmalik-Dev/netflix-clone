@@ -1,0 +1,513 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-weight: bold !important;
+}
+
+body {
+  font-family: "Fredoka", sans-serif;
+  font-family: "Open Sans", sans-serif;
+  background-color: #000000;
+}
+
+hr {
+  background-color: #303030;
+  height: 10px;
+  margin-top: 0;
+  width: 100%;
+  position: absolute;
+  bottom: -25px;
+}
+
+header {
+  height: 100vh;
+  position: relative;
+}
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5803921569);
+  z-index: 2;
+}
+header > img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+header .container {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 10px 110px;
+  height: 100%;
+}
+header .container .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 350px) {
+  header .container .top {
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+}
+header .container .top h1 {
+  color: #f40612;
+  text-transform: uppercase;
+}
+@media (max-width: 420px) {
+  header .container .top h1 {
+    font-size: 23px;
+  }
+}
+header .container .top .options {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+@media (max-width: 420px) {
+  header .container .top .options {
+    gap: 5px;
+  }
+}
+header .container .top .options select {
+  background-color: transparent;
+  color: #fff;
+  padding: 10px;
+  font-size: 20px;
+}
+@media (max-width: 420px) {
+  header .container .top .options select {
+    padding: 2px;
+  }
+}
+header .container .top .options select option {
+  background-color: #303030;
+}
+@media (max-width: 420px) {
+  header .container .top .options select option {
+    font-size: 15px;
+  }
+}
+header .container .top .options a {
+  background-color: red;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 20px;
+}
+@media (max-width: 420px) {
+  header .container .top .options a {
+    padding: 2px;
+  }
+}
+header .container .text {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+}
+header .container .text h2 {
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+@media (max-width: 750px) {
+  header .container .text h2 {
+    font-size: 30px;
+  }
+}
+header .container .text p {
+  font-size: 20px;
+  text-align: center;
+  line-height: 2.5;
+}
+header .container form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .container form input {
+  width: 400px;
+  height: 40px;
+  outline: none;
+  padding: 10px;
+  border: 2px solid #f40612;
+}
+@media (max-width: 600px) {
+  header .container form input {
+    width: 70%;
+  }
+}
+header .container form button {
+  padding: 9px 20px;
+  margin-right: -1px;
+  background-color: #f40612;
+  color: #fff;
+  border: none;
+}
+@media (max-width: 600px) {
+  header .container form button {
+    width: 25%;
+  }
+}
+
+main {
+  margin-top: 60px;
+}
+main section {
+  position: relative;
+}
+main section .container {
+  padding: 20px 10px;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+@media (max-width: 850px) {
+  main section .container {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+main section .container .text {
+  flex: 1;
+  color: #fff;
+}
+@media (max-width: 850px) {
+  main section .container .text {
+    text-align: center;
+    margin-bottom: 35px;
+  }
+}
+main section .container .text h4 {
+  font-size: 50px;
+}
+@media (max-width: 850px) {
+  main section .container .text h4 {
+    font-size: 25px;
+  }
+}
+main section .container .text p {
+  font-size: 20px;
+}
+@media (max-width: 850px) {
+  main section .container .text p {
+    font-size: 15px;
+  }
+}
+main section .container .image-corner {
+  flex: 1;
+  position: relative;
+}
+main section .container .image-corner .outer {
+  width: 100%;
+  position: relative;
+  z-index: 5;
+}
+main section .container .image-corner .inner {
+  width: 100%;
+  position: absolute;
+  top: 3px;
+  left: 0;
+  z-index: 2;
+}
+main section .container .image-corner .small-img {
+  width: 350px;
+}
+@media (min-width: 1400px) {
+  main section .container .image-corner .small-img {
+    left: 104px;
+    width: 65%;
+  }
+}
+@media (max-width: 1199px) {
+  main section .container .image-corner .small-img {
+    left: 100px;
+    width: 60%;
+  }
+}
+@media (max-width: 992px) {
+  main section .container .image-corner .small-img {
+    left: 57px;
+    width: 65%;
+    top: 20px;
+  }
+}
+@media (max-width: 851px) {
+  main section .container .image-corner .small-img {
+    left: 114px;
+    width: 63%;
+    top: 36px;
+  }
+}
+@media (max-width: 768px) {
+  main section .container .image-corner .small-img {
+    left: 96px;
+  }
+}
+@media (max-width: 575px) {
+  main section .container .image-corner .small-img {
+    left: 17%;
+    top: 9%;
+  }
+}
+main section .container .box {
+  position: absolute;
+  bottom: 20px;
+  border: 2px solid #303030;
+  z-index: 10;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 150px;
+  padding: 15px;
+  background-color: #000000;
+  border-radius: 10px;
+}
+@media (max-width: 990px) {
+  main section .container .box {
+    height: 100px;
+    bottom: 0;
+  }
+}
+@media (max-width: 340px) {
+  main section .container .box {
+    height: 70px;
+  }
+}
+main section .container .box img {
+  height: 120px;
+}
+@media (max-width: 990px) {
+  main section .container .box img {
+    height: 80px;
+    left: 0 !important;
+  }
+}
+@media (max-width: 340px) {
+  main section .container .box img {
+    height: 60px;
+  }
+}
+main section .container .box .text {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding-right: 20px;
+}
+@media (max-width: 990px) {
+  main section .container .box .text {
+    margin-bottom: -15px;
+  }
+}
+main section .container .box .text h6 {
+  font-size: 18px;
+}
+@media (max-width: 340px) {
+  main section .container .box .text h6 {
+    font-size: 14px;
+  }
+}
+main section .container .box .text p {
+  font-size: 15px;
+  color: #0071eb;
+}
+@media (max-width: 340px) {
+  main section .container .box .text p {
+    font-size: 12px;
+  }
+}
+
+.questions {
+  padding: 80px 0;
+  position: relative;
+}
+.questions .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+}
+.questions .container h3 {
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+.questions .container .custom-details {
+  padding: 20px;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.questions .container .custom-details .box {
+  background-color: #303030;
+  padding: 45px 20px;
+  position: relative;
+}
+.questions .container .custom-details .box .top {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+.questions .container .custom-details .box .top.show {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.questions .container .custom-details .box .top h6 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  padding-right: 15px;
+  padding-top: 25px;
+}
+.questions .container .custom-details .box .top span {
+  width: 50px;
+  height: 50px;
+  font-size: 40px;
+  cursor: pointer;
+  transition: 0.3s;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.questions .container .custom-details .box .top span:hover {
+  color: #f40612;
+}
+.questions .container .custom-details .box .text {
+  transition: 1s;
+  height: 0;
+  overflow: hidden;
+  margin-bottom: -40px;
+}
+.questions .container .custom-details .box .text.show {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  overflow: auto;
+  margin: 0;
+  padding-top: 65px;
+}
+.questions .container .custom-details .box .text.show p {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  overflow: auto;
+}
+.questions .container .custom-details .box .text p {
+  font-size: 20px;
+  height: 0;
+  overflow: hidden;
+  transition: 1.3s;
+}
+.questions .container .custom-details .box .text p:first-of-type {
+  margin-bottom: 30px;
+}
+.questions .container form {
+  text-align: center;
+  position: relative;
+}
+.questions .container form p {
+  font-size: 23px;
+  margin: 40px 0;
+}
+.questions .container form input {
+  padding: 10px;
+  outline: none;
+  border: none;
+  width: 70%;
+}
+.questions .container form button {
+  background-color: #f40612;
+  color: #fff;
+  font-size: 20px;
+  margin-right: -4px;
+  padding: 8px 0;
+  border: none;
+  width: 15%;
+}
+
+footer {
+  margin-top: 40px;
+}
+footer .container p {
+  font-size: 20px;
+}
+footer .container ul {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+}
+@media (max-width: 780px) {
+  footer .container ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+  }
+}
+footer .container ul li ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+footer .container ul li ul li a {
+  color: rgba(128, 128, 128, 0.4509803922);
+  text-decoration: none;
+  transition: 0.3s;
+}
+footer .container ul li ul li a:hover {
+  color: #f40612;
+}
+footer .container .bottom {
+  margin-top: 30px;
+  margin-right: 20px;
+}
+footer .container .bottom > div {
+  position: relative;
+}
+footer .container .bottom > div i {
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+  color: white;
+}
+footer .container .bottom > div select {
+  padding: 10px;
+  padding-right: 40px;
+  background-color: transparent;
+  color: #fff;
+}
+footer .container .bottom > div select option {
+  background-color: #000000;
+}
+footer .container .bottom P {
+  margin-top: 20px;
+  font-size: 18px;
+}/*# sourceMappingURL=style.css.map */
